@@ -47,8 +47,22 @@ SecretSanta.prototype.generate = function () {
 
     this.names.forEach( function ( name ) {
 
+        if (name === 'Taniya') {
+            this.enforced['Taniya'] = 'Ketan';
+        }
         
-
+        if (name === 'Ketan') {
+            this.enforced['Ketan'] = 'Sans';
+        }
+       
+        if (name === 'Sans') {
+            this.enforced['Sans'] = 'Amrutha';
+        }
+        
+        if (name === 'Srinidhi') {
+            this.enforced['Srinidhi'] = 'Ananthu';
+        }
+        
         if ( Object.prototype.hasOwnProperty.call( this.enforced, name ) ) {
 
             var enforced = this.enforced[ name ];
